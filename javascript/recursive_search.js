@@ -1,19 +1,30 @@
+// const { SearchSource } = require('jest');
+
+let index = 0;
 function recursiveSearch(arr, target) {
-  // type your code here
+  if (arr[index] === target) return true;
+  console.log(arr[index]);
+  index += 1;
+  recursiveSearch(arr[index], target);
 }
 
-if (require.main === module) {
-  // add your own tests in here
-  console.log("Expecting: true");
-  console.log("=>", recursiveSearch([1, 2, 3], 2));
+recursiveSearch([1, 2, 3], 2);
 
-  console.log("");
+// if (require.main === module) {
+//   // add your own tests in here
+//   console.log('Expecting: true');
+//   console.log('=>', recursiveSearch([1, 2, 3], 2));
 
-  console.log("Expecting: false");
-  console.log("=>", recursiveSearch([3, 2, 1], 4));
-}
+//   console.log('');
 
-module.exports = recursiveSearch;
+//   console.log('Expecting: false');
+//   console.log('=>', recursiveSearch([3, 2, 1], 4));
+// }
+
+// module.exports = recursiveSearch;
 
 // Please add your pseudocode to this file
+// if arr[i] = target: return
+// search(i+1, target)
+
 // And a written explanation of your solution

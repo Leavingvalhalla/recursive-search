@@ -1,18 +1,24 @@
 def recursive_search(arr, target)
-  # type your code in here
+  return false if arr == []
+  return true if arr[0] == target
+  return false if arr.length == 1
+  recursive_search(arr[1..-1], target)
 end
 
-if __FILE__ == $PROGRAM_NAME
-  puts "Expecting: true"
-  puts "=>", recursive_search([1, 2, 3], 2)
+puts recursive_search([3, 2, 1], 4)
 
-  puts
 
-  puts "Expecting: false"
-  puts "=>", recursive_search([3, 2, 1], 4)
+# if __FILE__ == $PROGRAM_NAME
+#   puts "Expecting: true"
+#   puts "=>", recursive_search([1, 2, 3], 2)
 
-  # Don't forget to add your own!
-end
+#   puts
+
+#   puts "Expecting: false"
+#   puts "=>", recursive_search([3, 2, 1], 4)
+
+#   # Don't forget to add your own!
+# end
 
 # Please add your pseudocode to this file
 # And a written explanation of your solution

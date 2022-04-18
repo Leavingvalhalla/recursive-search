@@ -5,20 +5,18 @@ def recursive_search(arr, target)
   recursive_search(arr[1..-1], target)
 end
 
-puts recursive_search([3, 2, 1], 4)
-
-
-# if __FILE__ == $PROGRAM_NAME
-#   puts "Expecting: true"
-#   puts "=>", recursive_search([1, 2, 3], 2)
-
-#   puts
-
-#   puts "Expecting: false"
-#   puts "=>", recursive_search([3, 2, 1], 4)
-
-#   # Don't forget to add your own!
-# end
 
 # Please add your pseudocode to this file
+
+# false if array is empty
+# true if first number is target
+# run search again with all but first num
+
+
 # And a written explanation of your solution
+
+# We are checking to see if the first element in the array 
+# is the target element. If it's not, we're calling the function again
+# with all but the first element. If the array is called when completely empty
+# (after all other numbers have been eliminated as possible solutions), 
+# the function returns false.
